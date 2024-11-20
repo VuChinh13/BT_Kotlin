@@ -23,17 +23,19 @@ fun main(args: Array<String>) {
 
     var mangNT:MutableList<Int> = mutableListOf()
     for (i in mang){
-        var danhDau = 0
-        for (j in 2..Math.sqrt(i.toDouble()).toInt()){
-            if (i % j == 0){
-                // chỉ cần 1 số mà chia hết thì thoát luôn
-                danhDau = 1
-                break
+        if(i > 1) {
+            var danhDau = 0
+            for (j in 2..Math.sqrt(i.toDouble()).toInt()) {
+                if (i % j == 0) {
+                    // chỉ cần 1 số mà chia hết thì thoát luôn
+                    danhDau = 1
+                    break
+                }
             }
-        }
-        // thỏa mãn điều kiện
-        if (danhDau == 0){
-            mangNT.add(i)
+            // thỏa mãn điều kiện
+            if (danhDau == 0) {
+                mangNT.add(i)
+            }
         }
     }
 
