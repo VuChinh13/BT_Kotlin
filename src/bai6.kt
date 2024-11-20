@@ -11,7 +11,7 @@ open class Canbo {
         this.diaChi = diaChi
     }
 
-    // Dùng để hiển thị ra thông tin của cán bộ
+
     open fun hienThiThongTin() {
         print("Họ tên: $hoTen, Tuổi: $tuoi, Giới tính: $gioiTinh, Địa chỉ: $diaChi, ")
     }
@@ -42,7 +42,6 @@ class KySu : Canbo {
         this.nganhDaoTao = nganhDaoTao
     }
 
-    // Hiển thị thông tin kỹ sư, bao gồm cả ngành đào tạo
     override fun hienThiThongTin() {
         super.hienThiThongTin()
         println("Ngành đào tạo: $nganhDaoTao")
