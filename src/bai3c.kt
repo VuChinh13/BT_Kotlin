@@ -7,22 +7,21 @@ fun main(args: Array<String>) {
     // lấy 36 / 6 = 6
     // -> các ước là 1,36,2,18,3,12,4,9,6
     // điều kiện là chia đến khi mà số chia = thương
+
     print("Nhập N : ")
     val N = readLine()?.toInt()
-    var mang:MutableList<Int> = mutableListOf()
+    val mang: MutableList<Int> = mutableListOf()
 
-    for (i in 1..Math.sqrt(N!!.toDouble()).toInt()){
-      if (N % i == 0){
-        if (i!=Math.sqrt(N.toDouble()).toInt()){
+    for (i in 1..Math.sqrt(N!!.toDouble()).toInt()) {
+        if (N % i == 0) {
             mang.add(i)
-            mang.add(N/i)
-        }else{
-            mang.add(i)
+            if (i != N / i) {
+                mang.add(N / i)
+            }
         }
-      }
     }
 
-    for (i in mang){
+    for (i in mang) {
         print("$i, ")
     }
 

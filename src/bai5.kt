@@ -2,7 +2,7 @@ fun main(args: Array<String>) {
     // Xét điều kiện a!= 0
 
     print("Nhập a: ")
-    var a: Double? = readLine()?.toDouble()
+    val a: Double? = readLine()?.toDouble()
 
     if (a == 0.toDouble()) {
         print("Hãy nhập a cho đúng")
@@ -10,16 +10,16 @@ fun main(args: Array<String>) {
     }
 
     print("Nhập b: ")
-    var b: Double? = readLine()?.toDouble()
+    val b: Double? = readLine()?.toDouble()
 
     print("Nhập c: ")
-    var c: Double? = readLine()?.toDouble()
+    val c: Double? = readLine()?.toDouble()
 
     // tính delta
 
 
     if (a != null && b != null && c != null) {
-        var delta: Double = (b * b) - (4 * a * c)
+        val delta: Double = (b * b) - (4 * a * c)
 
 
         if (delta == 0.toDouble()) {

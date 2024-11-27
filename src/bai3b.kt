@@ -1,14 +1,18 @@
 fun main(args: Array<String>) {
     // đầu tiên tìm các số nguyên tố từ số đó trở xuống
+    // ví dụ tìm những số nguyên tố từ số 30 trở xuống và chia lần lượt cho các số
     // 30 / 2 = 15
     // 15 / 3 = 5
     // 5 / 5 = 1
+    // 30 = 2 * 3 * 5
+
     print("Nhập số : ")
     var N = readLine()?.toInt()
-    var mangPT: MutableList<Int> = mutableListOf()
+    val mangPT: MutableList<Int> = mutableListOf()
+
     while (N != 1) {
         // tìm các số nguyên tố
-        var mangNT: MutableList<Int> = mutableListOf()
+        val mangNT: MutableList<Int> = mutableListOf()
         for (i in 2..N!!) {
             var danhdau: Int = 0
             for (j in 2..Math.sqrt(i.toDouble()).toInt()) {
@@ -30,7 +34,7 @@ fun main(args: Array<String>) {
             }
         }
     }
-    for (i in mangPT){
+    for (i in mangPT) {
         print("$i ")
     }
 }

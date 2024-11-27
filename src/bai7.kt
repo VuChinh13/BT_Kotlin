@@ -41,9 +41,9 @@ class TamGiac : DaGiac {
     fun tinhDienTich(): Double {
         // Sử dụng công thức Heron
         var s1: Double = 0.0
-        var a: Double = this.getMangKichThuoc()[0].toDouble()
-        var b: Double = this.getMangKichThuoc()[1].toDouble()
-        var c: Double = this.getMangKichThuoc()[2].toDouble()
+        val a: Double = this.getMangKichThuoc()[0].toDouble()
+        val b: Double = this.getMangKichThuoc()[1].toDouble()
+        val c: Double = this.getMangKichThuoc()[2].toDouble()
 
         s1 = (a + b + c) / 2
         return Math.sqrt(s1 * (s1 - a) * (s1 - b) * (s1 - c))
@@ -52,7 +52,7 @@ class TamGiac : DaGiac {
 
 fun main(args: Array<String>) {
     // Khởi tạo mảng TamGiac với N phần tử
-    var tamGiac: MutableList<TamGiac> = mutableListOf()
+    val tamGiac: MutableList<TamGiac> = mutableListOf()
 
 
     while (true) {
@@ -66,7 +66,7 @@ fun main(args: Array<String>) {
         println("6, Sắp xếp theo diện tích tăng dần")
         println("7, Thoát chương trình")
         print("Nhập lựa chọn : ")
-        var select = readLine()?.toInt()
+        val select = readLine()?.toInt()
         when (select) {
 
             1 -> {
@@ -84,7 +84,7 @@ fun main(args: Array<String>) {
                     print("Nhập cạnh c : ")
                     val c = readLine()?.toInt()!!
 
-                    var soCanh = intArrayOf(a, b, c)
+                    val soCanh = intArrayOf(a, b, c)
                     // khởi tạo 1 tam giác
                     val tamgiac = TamGiac(3, soCanh)
                     tamGiac.add(tamgiac)
@@ -122,7 +122,7 @@ fun main(args: Array<String>) {
 
             4 -> {
                 print("Hãy nhập vào vị trí tam giác muốn tìm kiếm : ")
-                var index = readLine()?.toInt()!!
+                val index = readLine()?.toInt()!!
                 if (index < 0 || index >= tamGiac.size) {
                     println("Vị trí không hợp lệ")
                 } else {
@@ -139,7 +139,7 @@ fun main(args: Array<String>) {
 
             5 -> {
                 print("Nhập vị trí cần xóa của tam giác : ")
-                var index1 = readLine()?.toInt()!!
+                val index1 = readLine()?.toInt()!!
                 if (index1 < 0 || index1 >= tamGiac.size) {
                     println("Vị trí không hợp lệ")
                 } else {

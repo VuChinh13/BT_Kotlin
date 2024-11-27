@@ -11,7 +11,7 @@ fun kiemTraNguyenTo(value: Int): Boolean {
 }
 // ý tưởng là lấy 2 số cuối trong mảng xong cộng với nhau
 fun Fibonacci(N: Int) {
-    var result: MutableList<Int> = mutableListOf(0, 1)
+    val result: MutableList<Int> = mutableListOf(0, 1)
     var size = result.size
     while ((result.get(size-1) + result.get(size- 2)) < N) {
         result.add(result.get(size-1) + result.get(size- 2))
@@ -29,10 +29,10 @@ fun Fibonacci(N: Int) {
 
 fun main(args: Array<String>) {
     print("Hãy nhập vào 1 số nguyên dương : ")
-    val N:Int? = readLine()?.toInt()
+    val N = readLine()?.toIntOrNull()
     if (N!=null){
         if (N>1){
             Fibonacci(N)
-        }else return
+        }
     }
 }

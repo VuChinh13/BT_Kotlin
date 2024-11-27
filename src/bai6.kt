@@ -57,7 +57,6 @@ class NhanVien : Canbo {
         this.congViec = congViec
     }
 
-    // Hiển thị thông tin nhân viên, bao gồm cả công việc
     override fun hienThiThongTin() {
         super.hienThiThongTin()
         println("Công việc: $congViec")
@@ -86,8 +85,6 @@ class QLCB {
                 val bac = readLine()?.toInt()!!
 
                 val congNhan = CongNhan(hoTen,tuoi,gioiTinh,diaChi,bac)
-
-                // thêm vào trong danh sách những cán bộ
                 danhSachCanBo.add(congNhan)
             }
 
@@ -105,7 +102,6 @@ class QLCB {
                 val nganhDaoTao = readLine().toString()
 
                 val kySu = KySu(hoTen,tuoi,gioiTinh,diaChi,nganhDaoTao)
-                // Thêm vào danh sách cán bộ
                 danhSachCanBo.add(kySu)
             }
 
@@ -123,7 +119,6 @@ class QLCB {
                 val congViec = readLine().toString()
 
                 val nhanVien = NhanVien(hoTen,tuoi,gioiTinh,diaChi,congViec)
-                // Thêm vào danh sách cán bộ
                 danhSachCanBo.add(nhanVien)
             }
         }
@@ -159,7 +154,7 @@ class QLCB {
 }
 
 fun main(args: Array<String>) {
-    var qlcb = QLCB()
+    val qlcb = QLCB()
     while(true){
         println("Lựa chọn các chức năng : ")
         println("1, Thêm mới cán bộ")
@@ -167,7 +162,7 @@ fun main(args: Array<String>) {
         println("3, Hiển thị thông tin danh sách cán bộ")
         println("4, Thoát chương trình")
         print("Nhập lựa chọn : ")
-        var select = readLine()?.toInt()
+        val select = readLine()?.toInt()
         when(select){
 
             1->{

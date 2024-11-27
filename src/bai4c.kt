@@ -2,13 +2,13 @@ fun main(args: Array<String>) {
     // Giả sử mảng đã được sắp xếp rồi
     // 1 2 5 7 8 9 10
 
-    var mang: MutableList<Int> = mutableListOf()
+    val mang: MutableList<Int> = mutableListOf()
     print("Số phần tử có trong mảng : ")
     val N = readLine()?.toInt()
     println("Hãy nhập vào 1 mảng tăng dần  ")
         for (i in 0 until N!!){
             print("Nhập phần tử thứ $i: ")
-            var input1:String? = readLine()
+            val input1:String? = readLine()
             if (input1 != null){
                 mang.add(input1.toInt())
             }
